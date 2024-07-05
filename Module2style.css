@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  /* background-color: #333; */
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em; /* 75% larger than the default font size */
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+}
+
+.menu-item {
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  padding-top: 50px; /* Pushes down the content to avoid overlap with the header */
+}
+
+.menu-item-header {
+  background-color: #999;
+  padding: 0px;
+  border: 1px solid #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin-left: 265px;
+}
+
+.menu-item-header h2 {
+  margin: 0;
+  font-size: 1.25em; /* 25% larger than the default font size */
+  padding-left: 20px; /* Padding to ensure text does not touch the border */
+}
+
+.menu-item-header {
+  background-color: #e57373;
+}
+
+.menu-item.beef .menu-item-header {
+  background-color: #e53935;
+}
+
+.menu-item.sushi .menu-item-header {
+  background-color: #fdd835;
+}
+
+/* Desktop view (992px and above) */
+@media (min-width: 992px) {
+  .menu-item {
+    width: 30%;
+    float: left;
+  }
+}
+
+/* Tablet view (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-item {
+    width: 45%;
+    float: left;
+  }
+  .menu-item:nth-child(3) {
+    width: 100%;
+    float: none;
+  }
+}
+
+/* Mobile view (767px and below) */
+@media (max-width: 767px) {
+  .menu-item {
+    width: 100%;
+    float: none;
+  }
+}
